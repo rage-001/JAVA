@@ -1,0 +1,36 @@
+//Example of Boxing (Primitive to wrapper) and Unboxing (Wrapper to primitive)
+
+class WrapperExample1{
+	 public static void main(String[] args){
+		 
+		 int a =20;
+		 
+		 //Explicit Boxing : Conerting int to integer
+		 Integer i = Integer.valueOf(a);
+		 
+		 //Autoboxing : Compiler converts int to integer Automatically 
+		 Integer j=a;
+		 
+		 System.out.println("Primitive int value : "+a);
+		 System.out.println("Boxed using valueOf() : "+i);
+		 System.out.println("Autoboxed value : "+j);
+	 }
+
+
+}
+class WrapperExample2{
+	 public static void main(String[] args){
+		 
+		 Integer a =30;
+		 
+		 //Explicit Unboxing : Conerting int to integer
+		 int i = a.intValue();
+		 
+		 //Autoboxing : Compiler converts integer to int Automatically 
+		 int j=a;
+		 
+		 System.out.println("Wrapper Integer value : "+a);
+		 System.out.println("Unboxed using intValue() : "+i);
+		 System.out.println("Auto-unboxed value : "+j);
+	 }
+}

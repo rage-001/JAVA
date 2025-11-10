@@ -1,0 +1,22 @@
+import java.io.*;
+class Employee{
+	int id;
+	String name;
+	double salary;
+}
+
+//constructor 
+Employee(int id , String name, double salary){
+	this.id=id;
+	this.name=name;
+	this.salary=salary;
+}
+
+// Method to display employee details 
+
+void displayDetails(){
+	System.out.println("Employee ID : "+id);
+	
+
+
+}
