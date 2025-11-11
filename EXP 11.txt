@@ -1,31 +1,40 @@
-import java.io.*;
- class Book {
- String title;
- String author;
- double price;
- Book(String title, String author, double price)
- {
- this.title = title;
- this.author = author;
- this.price = price;
+// Parent class
+class Vehicle {
+ void start() {
+ System.out.println("Vehicle is starting...");
  }
- void displayDetails()
- {
- System.out.println("Title : " + title);
- System.out.println("Author: " + author);
- System.out.println("Price : $" + price);
- System.out.println();
+}
+// Child class 1
+class Car extends Vehicle {
+ @Override
+ void start() {
+ System.out.println("Car starts with a key.");
  }
+}
+// Child class 2
+class Bike extends Vehicle {
+ @Override
+ void start() {
+ System.out.println("Bike starts with a kick or button.");
  }
- public class Main {
- public static void main(String[] args)
- {
- Book book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald",
-10.99);
- Book book2 = new Book("1984", "George Orwell", 8.50);
- System.out.println("Book 1 Details:");
- book1.displayDetails();
- System.out.println("Book 2 Details:");
- book2.displayDetails();
+}
+// Child class 3
+class Truck extends Vehicle {
+ @Override
+ void start() {
+ System.out.println("Truck starts with a heavy engine sound.");
  }
+}
+// Main class
+public class PolymorphismDemo1 {
+ public static void main(String[] args) {
+ // Polymorphism: Parent reference → Child objects
+ Vehicle v;
+ v = new Car();
+ v.start(); // Calls Car’s start()
+ v = new Bike();
+ v.start(); // Calls Bike’s start()
+ v = new Truck();
+ v.start(); // Calls Truck’s start()
  }
+}
