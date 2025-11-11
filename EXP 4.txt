@@ -1,22 +1,29 @@
-import java.io.*;
 class Employee{
-	int id;
-	String name;
-	double salary;
-}
-
-//constructor 
-Employee(int id , String name, double salary){
+	
+	private int id;
+	private String name;
+	private double salary;
+	
+	public Employee(int id , String name, double salary){
 	this.id=id;
 	this.name=name;
 	this.salary=salary;
-}
-
-// Method to display employee details 
-
-void displayDetails(){
+	}
+	void displayDetails(){
 	System.out.println("Employee ID : "+id);
+	System.out.println("Employee Name : "+name);
+	System.out.println("Employee Salary : "+salary);
+}
+}
+public class Employee_Test2{
 	
-
-
+	public static void main(String[] args){
+		Employee emp1 = new Employee(101,"Priya Sharma",45000);
+		Employee emp2 = new Employee(100,"Rahul Verma",55000);
+		
+		System.out.println("Employee 1 Details : ");
+		emp1.displayDetails();
+		System.out.println("Employee 2 Details : ");
+		emp2.displayDetails();
+	}
 }
